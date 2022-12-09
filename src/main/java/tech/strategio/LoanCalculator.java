@@ -13,7 +13,12 @@ public class LoanCalculator {
      */
     static int getRemainingAmountIn3Months(int amount) {
         // TODO: Rewrite this method
-        return -1;
+        final int months = 3;
+        for (int i = 0; i < months; i++) {
+            int owe = (int) (0.1 * amount);
+            amount -= owe;
+        }
+        return amount ;
     }
 
     public static void main(String[] args) {
